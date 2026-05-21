@@ -1,0 +1,21 @@
+# Animal-detection pipeline -- Python dependencies
+# Versions pinned to match the system this pipeline was developed/tested on.
+# Tested with Python 3.8.18.
+#
+# Install:   pip install -r requirements.txt
+#
+# Notes:
+#  - ultralytics pulls in torch/numpy/opencv as deps, but they are pinned
+#    explicitly here for reproducible behaviour.
+#  - coremltools is only needed for the INT8 path (test_int8.py) and only
+#    works on macOS. On Windows/Linux you can omit it and use test.py.
+
+ultralytics==8.4.51
+torch==2.4.1
+torchvision==0.19.1
+numpy==1.24.4
+opencv-python==4.13.0
+pillow==10.4.0
+
+# --- INT8 / CoreML path (macOS only) ---
+coremltools==9.0

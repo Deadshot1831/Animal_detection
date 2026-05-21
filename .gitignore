@@ -1,0 +1,63 @@
+# ============================================================
+# Animal-detection  --  .gitignore
+#
+# COMMITTED (needed to run the pipeline):
+#   test.py, test_int8.py        -- the inference pipeline
+#   train14_best.pt              -- the custom model  (NOTE: ~102 MB, needs Git LFS)
+#   *.py analysis scripts        -- benchmark / compare / run_all / etc.
+#   requirements.txt, README.md  -- (create these; see notes)
+#   your check_human_detection helper module  -- (MUST be added)
+#
+# IGNORED: everything regenerable, downloadable, device-specific, or output.
+# ============================================================
+
+# --- CoreML models: Mac-only, and test_int8.py re-exports them automatically ---
+*.mlpackage/
+*.mlpackage
+
+# --- Pretrained weights: ultralytics auto-downloads these on first run ---
+yolov8l.pt
+yolov8n.pt
+yolov8s.pt
+yolo11*.pt
+
+# --- Camera-trap image datasets: large, and your own data ---
+TBL-1-12-2023--29-01-2024/
+New_images/
+
+# --- Generated output: annotated image folders ---
+comparison_output/
+annotated_*/
+sidebyside_*/
+
+# --- Generated output: CSV reports / summaries ---
+comparison_metrics.csv
+combined_comparison.csv
+combined_summary.txt
+per_image_results*.csv
+results_*.csv
+sidebyside_*.csv
+
+# --- Stray files / archives ---
+*.zip
+MATCH_*.jpg
+DIFF_*.jpg
+
+# --- Ultralytics run artifacts ---
+runs/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# --- Tooling / OS / editor ---
+.claude/
+.DS_Store
+.vscode/
+.idea/
+*.swp
