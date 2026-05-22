@@ -17,5 +17,11 @@ numpy==1.24.4
 opencv-python==4.13.0
 pillow==10.4.0
 
+# --- ONNX path (cross-platform: Windows / Linux / macOS) ---
+# Needed to run test_onnx.py with train14_best_int8.onnx.
+# For NVIDIA GPUs, use 'onnxruntime-gpu' instead.
+onnxruntime==1.19.2
+
 # --- INT8 / CoreML path (macOS only) ---
+# Only needed for test_int8.py. Skip on Windows/Linux.
 coremltools==9.0
