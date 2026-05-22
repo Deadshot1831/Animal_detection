@@ -21,6 +21,11 @@ yolov8n.pt
 yolov8s.pt
 yolo11*.pt
 
+# --- ONNX models ---
+# KEEP train14_best_int8.onnx -- 75 MB, cross-platform INT8, fits GitHub's limit.
+# IGNORE the FP32 export below -- 213 MB, exceeds GitHub's 100 MB hard limit.
+train14_best.onnx
+
 # --- Camera-trap image datasets: large, and your own data ---
 TBL-1-12-2023--29-01-2024/
 New_images/
