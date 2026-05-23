@@ -44,6 +44,7 @@ results_*.csv
 sidebyside_*.csv
 
 # --- Stray files / archives ---
+*.jpg
 *.zip
 MATCH_*.jpg
 DIFF_*.jpg
